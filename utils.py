@@ -68,7 +68,8 @@ def stringToImage(base64_string):
 
 # convert PIL Image to an RGB image( technically a numpy array ) that's compatible with opencv
 def toRGB(image):
-    return cv2.cvtColor(np.array(image), cv2.COLOR_BGR2RGB)
+    # cv2.cvtColor(np.array(image), cv2.COLOR_BGR2RGB)
+    return np.array(image)
 
 def toGray(image):
     return cv2.cvtColor(image, cv2.COLOR_BGR2GRAY)
